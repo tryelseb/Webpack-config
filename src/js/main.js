@@ -1,3 +1,6 @@
+import * as $ from 'jquery'
+import '@/style/test.css'
+import '@/style/main.scss'
 //= ../../node_modules/jquery/dist/jquery.js
 //= ../../node_modules/foundation-sites/dist/js/foundation.min.js
 //= partials/swiper.min.js

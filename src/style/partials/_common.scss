@@ -7,15 +7,15 @@ html, body {
   font-family: $main-font-family;
 
 }
-@font-face {
-  font-family: 'Myfont';
-  src: url('../fonts/myfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/myfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/myfont.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/myfont.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/myfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/myfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
+// @font-face {
+//   font-family: 'Myfont';
+//   src: url('../fonts/myfont.eot'); /* IE9 Compat Modes */
+//   src: url('../fonts/myfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('../fonts/myfont.woff2') format('woff2'), /* Super Modern Browsers */
+//   url('../fonts/myfont.woff') format('woff'), /* Pretty Modern Browsers */
+//   url('../fonts/myfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//   url('../fonts/myfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+// }
 ul {
   margin: 0;
   padding: 0;
