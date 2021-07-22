@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
 
 const isDev = process.env.NODE_ENV === 'development' // hmr - hott mode reload
 console.log("IS DEV:", isDev);
@@ -35,8 +36,9 @@ module.exports = {
    main: './js/main.js',   
   },
   output: {
-    filename: filename('js'),
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[name][ext][query]',
   },
   optimization: optimization(),
   plugins: [
@@ -53,7 +55,7 @@ module.exports = {
    new CleanWebpackPlugin(),
    new MiniCssExtractPlugin(
      {
-      filename: filename('css')
+      filename: 'css/[name].css'
      }
    )
   ],
@@ -61,6 +63,14 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src')
     }
+  },
+  devServer: {
+    open: true,
+    port: 4201,
+    watchOptions: {
+      poll: true,
+    },
+    compress: true,
   },
   module: {
    rules: [
@@ -71,6 +81,10 @@ module.exports = {
     {
       test: /\.s[ac]ss$/,
       use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+     },
+     {
+      test: /\.(png|svg|jpe?g)$/,
+      type: 'asset/resource',
      },
    ]
   },

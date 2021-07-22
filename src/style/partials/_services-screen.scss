@@ -227,7 +227,7 @@
 				.my-chekbox {
 					border-radius: 4px;
 					&:after {
-						background-image: url('../images/checkbox-done.svg');
+						background-image: url('@/img/checkbox-done.svg');
 						background-color: transparent;
 						background-position: 50% 50%;
 						background-repeat: no-repeat;
@@ -247,7 +247,7 @@
 				top: 0;
 				background-color: $main-color;
 				border-radius: 0 4px 4px 0;
-				background-image: url('../images/price-item.svg');
+				background-image: url('@/img/price-item.svg');
 				background-repeat: no-repeat;
 				background-position: center center;
 				background-size: cintain;
@@ -293,7 +293,7 @@
     min-height: 100%;
     background-color: $main-color;
     background-color: #00b956;
-    background-image: url(../images/professional-bg.svg);
+    background-image: url(@/img/professional-bg.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
     color: $text-color;
@@ -305,7 +305,7 @@
         height: 120px;
         background-color: $white-color;
         border-radius: 50%;
-        background-image: url('../images/cost-img.svg');
+        background-image: url('@/img/cost-img.svg');
         background-repeat: no-repeat;
         background-color: contain;
         background-position: 50% 50%;
@@ -388,7 +388,7 @@
 		}
 		&__2 {
 			background-color: $main-color;
-			background-image: url(../images/professional-bg.svg);
+			background-image: url(@/img/professional-bg.svg);
 			background-repeat: no-repeat;
 			background-position: -350% 40%;
 			min-height: 109px;
@@ -499,7 +499,7 @@
 				 top: 50%;
 				 transform: translateY(-50%);
 				 left: 0;
-				 background-image: url('../images/download-track.svg');
+				 background-image: url('@/img/download-track.svg');
 				 background-repeat: no-repeat;
 				 background-size: cover;
 				 height: 25px;

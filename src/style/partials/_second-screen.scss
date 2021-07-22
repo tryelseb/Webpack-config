@@ -1,6 +1,6 @@
 .speakers-first {
 	background-image: linear-gradient(180deg, rgba(#00B956, .85) 0%, rgba(#009847, .85) 100%), 
-	url('../images/speakers-bg.jpeg');
+	url('@/img/speakers-bg.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 30%;
@@ -56,7 +56,7 @@
 				left: 0;
 				top: 50%;
 				transform: translateY(-50%);
-				background-image: url('../images/timing-icon.svg');
+				background-image: url('@/img/timing-icon.svg');
 				background-repeat: no-repeat;
 				background-size: contain;
 			}
