@@ -72,6 +72,7 @@ module.exports = {
     },
     compress: true,
   },
+  devtool: isDev ? 'source-map' : false,
   module: {
    rules: [
     {
@@ -83,9 +84,23 @@ module.exports = {
       use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
      },
      {
+      test: /\.html$/,
+      use: ['html-loader']
+     },
+     {
       test: /\.(png|svg|jpe?g)$/,
       type: 'asset/resource',
      },
+     {
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }
    ]
   },
 };
